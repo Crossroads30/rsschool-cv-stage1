@@ -773,12 +773,11 @@ background-image: url(../../assets/images/flower_foto1.jpg);
   position: absolute;
 width: 1158px;
 height: 872px;
-
 top: 723px;
-
-
 background: #FFFFFF;
 }
+
+/* card1 start*/
 
 .card1{
   position: absolute;
@@ -786,10 +785,137 @@ width: 366px;
 height: 426px;
 left: 0px;
 top: 0px;
-
+border: 1px solid #FA6F32;
 border-radius: 5px;
-background: 
+overflow: hidden;
 }
+
+
+
+.img_wrap1{
+  position: relative;
+width: 366px;
+height: 366px;
+top: 0;
+left: 0;
+}
+
+.img_wrap1:hover img {
+
+transform:scale(1.1);
+}
+
+.pet1{
+  position: absolute;
+width: 366px;
+height: 366px;
+top: 0;
+left: 0;
+transition-duration: 500ms;
+transition-property: all;
+}
+
+.pet1_inner_text1{
+  position: absolute;
+left: 0;
+top: 0;
+width: 366px;
+height: 366px;
+background-color: rgba(0, 0, 0,.5);
+color: #fff;
+padding-top:133px;
+text-align: center;
+opacity: 0;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 140%;
+
+text-transform: uppercase;
+-webkit transition: all .25%;
+-o-transition: all .25%;
+transition: all .25%;
+transition-duration: 500ms;
+transition-property: all;
+}
+
+.pet1_inner_text2{
+  position: absolute;
+width: 366px;
+height: 366px;
+padding-top: 0px;
+text-align: center;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+line-height: 120%;
+text-transform: none;
+color:  #fff;
+}
+
+.pet1_inner_text1:hover{
+opacity: 1;
+}
+
+.pet1_text{
+position: absolute;
+height: 60px;
+width: 366px;
+left: 0;
+bottom: 0;
+background: #FFFFFF;
+position: absolute;
+
+}
+
+.pandas_text1{
+position: absolute;
+width: 294px;
+height: 22px;
+left: 16px;
+top: 8px;
+overflow: hidden;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 140%;
+
+text-transform: uppercase;
+
+color: #000000;
+}
+
+.pandas_text2{
+position: absolute;
+width: 294px;
+height: 18px;
+left: 16px;
+top: 28px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+line-height: 120%;
+
+color: #000000;
+}
+
+.banan_logo{
+position: absolute;
+width: 33px;
+height: 37px;
+left: 321px;
+top: 10px;
+}
+
+/* card1 end */
+
 
 .card2{
   position: absolute;
