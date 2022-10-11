@@ -800,11 +800,10 @@ transition: transform 1s;
   position: absolute;
 width: 366px;
 height: 366px;
-background-color: rgba(0, 0, 0,.5);
-color: #fff;
 padding-top:360px;
 text-align: center;
-opacity: 0;
+background-color: rgba(0, 0, 0,.6);
+color: #fff;
 
 font-family: 'Roboto';
 font-style: normal;
@@ -814,10 +813,15 @@ line-height: 140%;
 
 text-transform: uppercase;
 
-transition-duration: 1s;
+transition-duration: 1.5s;
 transition-property: all;
-transition: padding-top ease; 
-transition: opacity 1s; 
+
+opacity:0 ; 
+}
+
+.pet_inner_text1:hover{
+padding-top: 155px;
+opacity: 1;
 }
 
 .pet_inner_text2{
@@ -835,14 +839,6 @@ text-transform: none;
 color:  #fff;
 }
 
-.pet_inner_text1:hover{
-transition-duration: 1s;
-transition-property: all;
-opacity: 1;
-padding-top: 153px;
-
-}
-
 .pet_text{
 position: absolute;
 height: 60px;
@@ -851,12 +847,10 @@ left: 0;
 bottom: 0;
 background: #FFFFFF;
 position: absolute;
-
 }
 
 .pet_text1{
 position: absolute;
-
 left: 16px;
 top: 8px;
 overflow: hidden;
