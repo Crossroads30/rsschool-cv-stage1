@@ -813,6 +813,7 @@ line-height: 140%;
 
 text-transform: uppercase;
 
+
 transition-duration: 1.5s;
 transition-property: all;
 
@@ -1160,7 +1161,26 @@ font-size: 16px;
 line-height: 130%;
 
 color: #333B41;
+}
 
+.support_fund{
+   text-decoration: none;
+ color:  #333B41;
+}
+.support_fund:hover{
+  background: no-repeat;
+  opacity: 75%;
+}
+
+.underline{
+  position: absolute;
+width: 178px;
+height: 1px;
+left: calc(50% - 178px/2 - 305px);
+top: 272px;
+
+
+background: #FE9013;
 }
 
 .how_it_works{
@@ -1350,11 +1370,11 @@ color: #FFFFFF;
 
 .testimonials{
   position: relative;
-  display: flex;
-  height: 919px;
-  width: 100%;
-  min-width: 1600px;
-  justify-content: center;
+display: flex;
+height: 919px;
+width: 100%;
+min-width: 1600px;
+justify-content: center;
 }
 
 .testimonials_wrapper{
@@ -1380,30 +1400,23 @@ line-height: 130%;
 text-align: center;
 
 color: #333B41;
-
 }
 
 .testimonials_list{
   position: absolute;
-  top:94px;
-  left:0px;
+max-width: 1160px;
+height: 391px;
+top: 94px;
+white-space: nowrap; 
 }
 
 .testimonials_item{
-  display: inline; 
+display: inline;
 padding-right: 26px;
 }
 
 .testimonials_item:last-child{
   padding-right: 0px;
-}
-
-.testimonials_scroll{
-position: absolute;
-width: 599px;
-height: 8px;
-left: 280px;
-top: 506px;
 }
 
 .feedback_button{
@@ -1430,15 +1443,47 @@ padding-top: 16px;
 color: #FFFFFF;
 }
 
+/* progress line start */
+
+.progress{
+  position: relative;
+width: 599px;
+height: 8px;
+top: 506px;
+left: 280px;
+
+background: #F5F7F6;
+border-radius: 5px;
+border: 0.5px solid;
+border-color:#FEBDAB;
+
+overflow: hidden;
+}
+
+.progress_line{
+  position: absolute;
+
+height: 6px;
+
+bottom: 0.5px;
+width: 100%;
+background-color: #FE9013;
+border-radius: 5px;
+text-align: center;
+border: none;
+
+}
+
+/* progress line end */
+
 .leav_foto{
-  
-position: absolute;
+  position: absolute;
 width: 250px;
 height: 280.45px;
-left: 1353px;
-top: 644px;
+right: 0px;
+bottom: 0px;
 
-background: url(../img/png/leav_foto.png);
+background: url(../../assets/images/leav_foto.png);
 }
 
 /* testimonials section end */
@@ -1447,7 +1492,7 @@ background: url(../img/png/leav_foto.png);
 
 .footer{
   position: relative;
-  display: flex;
+display: flex;
 width: 100%;
 min-width: 1600px;
 height: 443px;
