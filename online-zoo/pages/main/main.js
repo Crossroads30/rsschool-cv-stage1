@@ -12,4 +12,23 @@ function progress() {
 
    	}
    }
-}
+};
+
+
+/*let validation = new JustValidate('#form')
+     
+
+validation
+  .addField('#email', [
+     {
+      rule: 'email',
+      errorMessage: 'Email is invalid!',
+    },
+  ])
+
+<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js">
+		</script>*/
+  
+
+
+
