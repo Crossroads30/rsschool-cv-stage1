@@ -1,1 +1,1282 @@
-1
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+    outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+    margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+    margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* roboto-100 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local(''),
+       url('../../assets/fonts/roboto-v30-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../assets/fonts/roboto-v30-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-300 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('../../assets/fonts/roboto-v30-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../assets/fonts/roboto-v30-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../../assets/fonts/roboto-v30-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../assets/fonts/roboto-v30-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../../assets/fonts/roboto-v30-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../assets/fonts/roboto-v30-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../../assets/fonts/roboto-v30-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../assets/fonts/roboto-v30-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-900 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local(''),
+       url('../../assets/fonts/roboto-v30-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../assets/fonts/roboto-v30-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+.html{
+  box-sizing: border-box;
+}
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+div{
+  cursor: default;
+}
+
+.body{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+
+a:hover{
+ background: #E47209;
+ } 
+a:focus{
+  outline: none;
+}
+ a:active{
+background: #4B9200;
+}
+
+/* header start */
+
+.header{
+	display: flex;
+	height: 80px;
+	width: 100%;
+
+	min-width: 1600px;
+	background: #000000;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+.header_wrapper{
+	position: relative;
+	display: flex;
+	width: 1160px;
+	height: 52px;
+	align-items: center;
+}
+
+.logo-link:hover{
+	background: no-repeat;
+}
+
+.logo1{
+	position: relative;
+	width: 82px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+}
+
+.pet_story_online{
+	position: absolute;
+	width: 72.49px;
+	height: 44.91px;
+	left: 4.75px;
+	top: 3.55px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 19.0145px;
+	line-height: 120%;
+
+
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.bamboo_stick{
+	position: absolute;
+	width: 12px;
+	height: 20.98px;
+	left: 11px;
+	top: 24px;
+
+	background-image: url(../../assets/icons/bamboo.svg);
+}
+
+
+.logo2{
+	position: absolute;
+	width: 105px;
+	height: 22px;
+	right: 0px;
+
+}
+
+.designed_by{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.designed_by:hover{
+	background: no-repeat;
+}
+
+.header_nav{
+	position:relative;
+	width: 400px;
+	height: 22.40px;
+	left: 145px; 
+}
+
+.header_list{
+	position: absolute;
+
+
+	color: #FFFFFF; 
+}
+
+.header_item{
+	display: inline; 
+	padding-right: 29px;
+
+}
+
+.header_link{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.header_link:hover{
+	background: no-repeat;
+}
+
+.header_link_donate{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+	text-decoration: none;
+	color: #F9804B;
+	cursor: default;
+}
+
+.header_link_donate:hover{
+	background: no-repeat;
+}
+
+/* header end */
+
+.big_panda_bg{
+	display: flex;
+	width: 100%;
+	min-width: 1600px;
+	height: 390px;
+	background: url(../../assets/images/panda_donate_bg.png) no-repeat center;
+	background-size: cover; 
+}
+
+/* donation_info start */
+
+.donation_info{
+	position: relative;
+	display: flex;
+	width: 100%;
+	min-width:1600px;
+	height: 1482px;
+	background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%); 
+	justify-content: center;
+}
+
+
+
+.text1{
+	position: absolute;
+	height: 47px;
+	width: 1156px;
+	top: 40px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 130%;
+	color: #FFFFFF;
+}
+
+.text2{
+	position: absolute;
+	height: 94px;
+	width: 1160px;
+	top: 97px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+	color: #FFFFFF;
+}
+
+.text3{
+	position: absolute;
+	width: 341px;
+	height: 47px;
+	left: calc(50% - 341px/2 - 409.5px);
+	top: 231px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 130%;
+	color: #FE9013;
+}
+
+.friend_bg{
+	position: relative;
+	display: flex;
+	width: 1160px;
+	height: 964px;
+	top: 338px;
+	background: rgba(255, 255, 255, 0.52);
+	backdrop-filter: blur(2px);
+	border-radius: 20px;
+	justify-content: center;
+}
+
+.pick_and_feed_wrapper{
+	position: relative;
+	display: flex;
+	width: 976px;
+	height: 862px;
+	top: 40px;
+	justify-content: center;
+}
+
+.friend_title{
+
+	position: absolute;
+	width: 463px;
+	height: 58px;
+	left: 250px;
+	top: 0px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 120%;
+	text-align: center;
+	color: #FE9013;
+}
+
+.subtitle{
+	position: absolute;
+	width: 1095px;
+	height: 29px;
+	left: 0px;
+	top: 78px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 120%;
+	color: #333B41;
+}
+
+.animal_widget{
+	position: absolute;
+	width: 284px;
+	height: 246px;
+	left: 463px;
+	top: 167px;
+}
+
+.four{
+	position: absolute;
+	width: 82px;
+	height: 58px;
+	left: 253px;
+	top: 272px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 72px;
+	line-height: 80%;
+	text-align: center;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.four_text{
+	position: absolute;
+	width: 159px;
+	height: 22px;
+	left: 215px;
+	top: 341px;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+	text-align: center;
+
+	color: #333B41;
+}
+
+.multiply{
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	left: 385px;
+	top: 297px;
+    background: #333B41;
+	background: url(../../assets/icons/x_icon.png);
+}
+
+/* progress_bar section */
+
+.progress_bar{
+	position: relative;
+	width: 976px;
+	height: 27px;
+	left: 0px;
+	top: 500px;
+
+	background: #404950;
+	border-radius: 2px;
+}
+
+.progress_line{
+	position: absolute;
+width: 915px;
+height: 2px;
+left: 31px;
+top: 12px;
+
+background: #72828E;
+}
+
+/* input block */
+
+.input_block{
+	position: absolute;
+	
+	width: 268px;
+	height: 100px;
+	left: 354px;
+    top: 625px;
+	
+	background: transparent;
+}
+
+.amount{
+	position: absolute;
+	
+	width: 268px;
+	height: 54px;
+	left: 0px;
+    top: 0px;
+	
+	background: transparent;
+
+    border: 1px solid #929699;
+    border-radius: 2px;
+}
+
+.amount::placeholder{
+	position: absolute;
+	left: 3.36%;
+	right: 53.36%;
+	top: 29.63%;
+	bottom: 29.63%;
+
+    font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+	
+    color: #929699;
+}
+
+.dollar{
+	position: absolute;
+	width: 10px;
+	height: 20px;
+	left: 248px;
+	top: 17px;
+
+	background: url(../../assets/icons/dollar.png);
+}
+
+.amount::-webkit-outer-spin-button,
+.amount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.amount[type=number] {
+  -moz-appearance: textfield;
+}
+
+.radio1{
+	position: absolute;
+	left: 25px;
+	top: 80px;
+}
+
+.radio2{
+	position: absolute;
+	left: 159px;
+	top: 80px;
+}
+
+label{
+    font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+    color: #333B41;
+    
+}
+
+label:hover, label:focus, label:active{
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	cursor: pointer;
+}
+
+
+
+
+.real_radio:hover{
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	cursor: pointer;
+}
+
+.amount:focus,.amount:hover{
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	cursor: pointer;
+}
+
+.custom_radio{
+	position: relative;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: transparent;
+    border: 1px solid #FE9013;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: text-top;
+    filter: none;
+}
+
+.custom_radio::before{
+	position: absolute;       
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    
+
+    background: #FFEE2E;
+    border-radius: 50%;
+    border: 0.5px solid  #929699; 
+
+    left: 50%;
+    top: 50%;
+    transform: translate( -50%, -50% ) scale(0);
+     
+    transition: 0.2s ease-in;
+    
+}
+
+.real_radio:checked + .custom_radio::before{
+     transform: translate( -50%, -50% ) scale(1);
+
+}
+
+.real_radio{
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+	z-index: -1;
+}
+
+
+/* input block end */
+
+.feed_a_friend_button{
+	position: absolute;
+	width: 298px;
+	height: 54px;
+	left: 342px;
+	top: 756px;
+
+	background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+	border-radius: 25px;
+
+	text-decoration: none;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+
+	padding-top: 16px;
+	text-align: center;
+	text-transform: uppercase;
+
+	color: #FFFFFF;
+}
+
+
+/* progress_bar section end */
+
+.bottom_text{
+	position: absolute;
+	width: 301px;
+	height: 22px;
+	left: 340px;
+	top: 840.02px;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+	color: #333B41;
+
+}
+
+/* donation_info end */
+
+/* footer start */
+
+.footer{
+	position: relative;
+	display: flex;
+	width: 100%;
+	min-width: 1600px;
+	height: 443px;
+	justify-content: center;
+	background: #111115;
+}
+
+.footer_wrapper{
+	position: absolute;
+	width: 1160px;
+	height: 352px;
+	top: 41px;
+}
+
+.logo_footer{
+	position: absolute;
+	width: 82px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+}
+
+.logo_link:hover{
+	background: no-repeat;
+}
+
+.donate{
+	position: absolute;
+	width: 298px;
+	height: 54px;
+	left: 0px;
+	top: 120px;
+
+
+	background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+	border-radius: 5px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding-top: 16px;
+
+	color: #FFFFFF;
+}
+
+/* footer links start */
+
+.footer_links{
+	position: absolute;
+	width: 111px;
+	height: 142px;
+	bottom: 0px;
+	left: 0px;
+}
+
+.facebook{
+	position: absolute;
+	top: 0px;
+}
+
+.facebook:hover{
+	background: no-repeat;
+}
+
+.facebook:active{
+	background-image: url(../../assets/styles/facebook_green.png);
+}
+
+.tweeter{
+	position: absolute;
+	top: 36px;
+} 
+
+.tweeter:hover{
+	background: no-repeat;
+}
+
+.tweeter:active{
+	background-image: url(../../assets/styles/twitter_green.png);
+}
+
+.instagram{
+	position: absolute;
+	top: 72px;
+} 
+
+.instagram:hover{
+	background: no-repeat;
+}
+
+.instagram:active{
+	background-image: url(../../assets/styles/instagram_green.png);
+}
+
+.youtube{
+	position: absolute;
+	top: 108px;
+} 
+
+.youtube:hover{
+	background: no-repeat;
+}
+
+.youtube:active{
+	background-image: url(../../assets/styles/youtube_green.png);
+}
+
+/* footer links end */
+
+/* footer menu start */
+
+.footer_list{
+	position: absolute;
+	left: 399px; 
+	top:331px;
+	color: #FFFFFF;
+}
+
+.footer_list_item{
+	display: inline; 
+	padding: 29px;
+}
+
+.footer_list_item:active{
+	background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+
+/* footer menu end */
+
+/* email_form start */
+
+.subscribe_title{
+	position: absolute;
+	width: 237px;
+	height: 29px;
+	right: 129px;
+	top: 0px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 120%;
+
+	color: #FFFFFF;
+}
+
+.form{
+	position: absolute;
+	width: 367px;
+	height: 42px;
+	right: 0px;
+	top: 43px;
+}
+
+.form__input{
+	width: 228px;
+	height: 42px;
+
+	background-color: transparent;
+
+	border: 0.7px solid #F9804B;
+	border-radius: 2px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+	color: #BDBDBD;
+
+	transition: border-color 1s
+}
+
+.form__input::placeholder{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+
+	padding: 10px;
+
+	color: #BDBDBD;
+}
+
+.text{
+	padding-left: 10px;
+}
+
+.form__input:invalid {
+	border-color: #D31414;
+}
+
+.form__input:valid {
+	border-color: #F9804B; 
+}
+
+.form__input:invalid~button {
+	border: 1px solid #D31414;
+	color: #D31414;;
+}
+
+.form__input: focus{
+	border-color: #D31414;
+}
+
+.btn{
+	width: 129px;
+	height: 42px;
+	padding-left: 10px;
+
+	background: #F1F3F2;
+
+	border: 1px solid #333B41;
+	border-radius: 5px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+	padding: 10px 39px;
+	color: #000000;
+
+	transition:all 1s;
+}
+
+.btn:active{
+	background: #F1F3F2;
+
+	border: 1px solid #4B9200;
+	color: #4B9200;
+	transition: color 0.1s;
+}
+
+/* email_form end */
+
+.Samborskaya{
+	position: absolute;
+	width: 220px;
+	height: 21px;
+	right: 5px;
+	bottom: 31px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 100;
+	font-size: 16px;
+	line-height: 130%;
+	text-decoration: none;
+	color: #FFFFFF;
+
+}
+
+.Samborskaya:hover{
+	background: no-repeat;
+}
+.Samborskaya:active{
+	text-decoration: underline;
+	color:  #4B9200;
+}
+
+.©RSSchool{
+	position: absolute;
+	width: 228px;
+	height: 21px;
+	right: 0px;
+	bottom: 0px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 100;
+	font-size: 16px;
+	line-height: 130%;
+	text-decoration: none;
+
+	color: #FFFFFF;
+}
+
+.©RSSchool:hover{
+	background: no-repeat;
+}
+.©RSSchool:active{
+	text-decoration: underline;
+	color:  #4B9200;
+}
+
+/* subscribe sectoin end */
+
+/* footer end */

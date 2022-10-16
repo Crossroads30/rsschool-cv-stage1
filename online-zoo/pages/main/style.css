@@ -483,7 +483,7 @@ background: #4B9200;
 }
 
 .logo1{
-  position: absolute;
+  position:relative; 
   width: 82px;
   height: 52px;
   left: 220px;
@@ -504,9 +504,9 @@ background: #4B9200;
   font-weight: 400;
   font-size: 19.0145px;
   line-height: 120%;
-/* or 23px */
-text-align: center;
-color: #FFFFFF;
+
+  text-align: center;
+  color: #FFFFFF;
 }
 
 .bamboo_stick{
@@ -583,6 +583,8 @@ color: #FFFFFF;
   background: no-repeat;
 }
 
+/*header end*/
+
 /* title section */
 
 .orange_circle{
@@ -645,8 +647,6 @@ color: #FFFFFF;
 }
 
 /* title section end */
-
-/*header end*/
 
 /*main start*/
 
