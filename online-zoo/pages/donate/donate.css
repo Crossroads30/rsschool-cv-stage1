@@ -756,28 +756,108 @@ background: #4B9200;
 
 /* progress_bar section */
 
-.progress_bar{
+.progress_wrapper{
+
 	position: relative;
+ 	width: 976px; 
+    height: 86px;
+    top: 493px;
+}
+
+.amount_title{
+	position: absolute;
+	width: 57px;
+	height: 22px;
+	left: 4px;
+	top: 461px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+
+	color: #000000;
+
+}
+
+.progress_bar{
+    display: flex;
 	width: 976px;
 	height: 27px;
 	left: 0px;
-	top: 500px;
+	top: 0px;
 
 	background: #404950;
 	border-radius: 2px;
+
+	justify-content: center;
+	align-items: center;
 }
 
 .progress_line{
 	position: absolute;
-width: 915px;
-height: 2px;
-left: 31px;
-top: 12px;
+	width: 915px;
+	height: 2px;
+	
 
-background: #72828E;
+	background: #72828E;
 }
 
-/* input block */
+.progress_bar_points{
+	position: absolute;
+	display: flex;
+	width: 915px;
+	height: 10px;
+	top: -4px;
+
+	justify-content: space-between;
+	align-items: center;
+}
+
+.points{
+    display: inline-flex;
+    background: #FFEE2E;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+
+}
+
+.amount_list{
+	position: absolute;
+	display: flex;
+	width: 976px;
+	height: 36px;
+	top: 46px;
+	padding-right: 24px;
+	justify-content: space-between;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 140%;
+	list-style-type: none;
+
+	text-transform: uppercase;
+
+
+	color: #333B41;
+
+}
+
+.amount_sum{
+	display: inline-flex;
+	background: url(../../assets/icons/dollar.png) no-repeat 0 8px;
+	padding-left: 12px;
+
+	
+}
+
+/* progress_bar section end */
+
+/* amount block */
 
 .input_block{
 	position: absolute;
@@ -827,7 +907,7 @@ background: #72828E;
 	left: 248px;
 	top: 17px;
 
-	background: url(../../assets/icons/dollar.png);
+	background: url(../../assets/icons/dollar1.png);
 }
 
 .amount::-webkit-outer-spin-button,
@@ -866,9 +946,6 @@ label:hover, label:focus, label:active{
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	cursor: pointer;
 }
-
-
-
 
 .real_radio:hover{
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -926,9 +1003,6 @@ label:hover, label:focus, label:active{
 	z-index: -1;
 }
 
-
-/* input block end */
-
 .feed_a_friend_button{
 	position: absolute;
 	width: 298px;
@@ -938,7 +1012,7 @@ label:hover, label:focus, label:active{
 
 	background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
 	border-radius: 25px;
-
+    border: none;
 	text-decoration: none;
 
 	font-family: 'Roboto';
@@ -947,15 +1021,26 @@ label:hover, label:focus, label:active{
 	font-size: 16px;
 	line-height: 140%;
 
-	padding-top: 16px;
+	
 	text-align: center;
+	
 	text-transform: uppercase;
 
 	color: #FFFFFF;
 }
 
+.feed_a_friend_button:hover{
+ background: #E47209;
+ } 
+.feed_a_friend_button:focus{
+  outline: none;
+}
+ .feed_a_friend_button:active{
+background: #4B9200;
+}
 
-/* progress_bar section end */
+/* amount block end */
+
 
 .bottom_text{
 	position: absolute;
