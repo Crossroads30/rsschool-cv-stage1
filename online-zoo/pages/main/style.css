@@ -1281,6 +1281,26 @@ color: #333B41;
   padding-top: 38px;
 }
 
+.hand_wiht_tree_block::before{
+  content: '';
+  position: absolute;
+  width: 69px;
+  height: 35px;
+  top: 62px;
+  right: 199px;
+  background: url(../../assets/icons/Vector.svg);
+}
+
+.hand_wiht_tree_block::after{
+  content: '';
+  position: absolute;
+  width: 69px;
+  height: 35px;
+  top: 62px;
+  left: 199px;
+  background: url(../../assets/icons/Vector.svg);
+}
+
 .monkey_block{
   position: absolute;
   width: 168px;

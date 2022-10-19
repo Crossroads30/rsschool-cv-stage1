@@ -751,7 +751,7 @@ background: #4B9200;
 	left: 385px;
 	top: 297px;
     background: #333B41;
-	background: url(../../assets/icons/x_icon.png);
+	background: url(../../assets/icons/x_icon.svg);
 }
 
 /* progress_bar section */
@@ -760,8 +760,8 @@ background: #4B9200;
 
 	position: relative;
  	width: 976px; 
-    height: 86px;
-    top: 493px;
+    height: 75px;
+    top: 500px;
 }
 
 .amount_title{
@@ -778,82 +778,103 @@ background: #4B9200;
 	line-height: 140%;
 
 	color: #000000;
-
-}
-
-.progress_bar{
-    display: flex;
-	width: 976px;
-	height: 27px;
-	left: 0px;
-	top: 0px;
-
-	background: #404950;
-	border-radius: 2px;
-
-	justify-content: center;
-	align-items: center;
-}
-
-.progress_line{
-	position: absolute;
-	width: 915px;
-	height: 2px;
-	
-
-	background: #72828E;
-}
-
-.progress_bar_points{
-	position: absolute;
-	display: flex;
-	width: 915px;
-	height: 10px;
-	top: -4px;
-
-	justify-content: space-between;
-	align-items: center;
-}
-
-.points{
-    display: inline-flex;
-    background: #FFEE2E;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-
 }
 
 .amount_list{
-	position: absolute;
+    position: relative;
 	display: flex;
-	width: 976px;
-	height: 36px;
-	top: 46px;
-	padding-right: 24px;
-	justify-content: space-between;
-
+	height: 75px;
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 500;
 	font-size: 26px;
-	line-height: 140%;
-	list-style-type: none;
+	line-height: 36px;
+	list-style: none;
 
 	text-transform: uppercase;
-
-
-	color: #333B41;
-
+	justify-content: space-between;
+	
+    color: #333B41;
 }
 
 .amount_sum{
-	display: inline-flex;
-	background: url(../../assets/icons/dollar.png) no-repeat 0 8px;
-	padding-left: 12px;
-
-	
+	width: 72px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
+	
+
+.dollar1{
+	font-size: 23px;
+}
+
+.amount_sum::before{
+	content: '';
+	display: block;
+    background: #FFEE2E;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+   margin-top: 8.5px;
+   margin-bottom: 19.5px;
+}
+
+.amount_sum:hover{
+	color: #FE9013;
+	cursor: pointer;
+}
+
+.amount_list::before{
+	content: '';
+    position: absolute;
+    display: block;
+	width: 100%;
+	height: 27px;
+	z-index: -1;
+
+	background: #404950;
+	border-radius: 2px;
+}
+
+.amount_list::after{
+	content: '';
+    position: absolute;
+    display: block;
+	z-index: -1;
+	width: 914px;
+	height: 2px;
+	top: 12px;
+	left: 31px;
+	background: #72828E;
+}
+
+.main_target{
+	position: relative;
+	display: flex;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	border: 1.5px solid #FE9013;
+	  
+	left: 661.5px;  
+	top: -81.5px;  
+	z-index: 0;
+}
+
+.target1{
+	position: absolute;
+	display: flex;
+	height: 23px;
+	width: 23px;
+	border-radius: 50%;
+	border: 1.5px solid #FE9013;
+	
+	left: 7px;  
+	top: 7px; 
+	z-index: 1;
+}
+
 
 /* progress_bar section end */
 
@@ -902,12 +923,19 @@ background: #4B9200;
 
 .dollar{
 	position: absolute;
-	width: 10px;
-	height: 20px;
+	
 	left: 248px;
 	top: 17px;
 
-	background: url(../../assets/icons/dollar1.png);
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	
+	
+    color: #929699;
+
+	
 }
 
 .amount::-webkit-outer-spin-button,
@@ -919,6 +947,14 @@ background: #4B9200;
 .amount[type=number] {
   -moz-appearance: textfield;
 }
+
+.amount:focus,.amount:hover{
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	cursor: pointer;
+}
+
+
+/* radiobuttons start */
 
 .radio1{
 	position: absolute;
@@ -948,11 +984,6 @@ label:hover, label:focus, label:active{
 }
 
 .real_radio:hover{
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	cursor: pointer;
-}
-
-.amount:focus,.amount:hover{
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	cursor: pointer;
 }
@@ -1002,6 +1033,8 @@ label:hover, label:focus, label:active{
 	opacity: 0;
 	z-index: -1;
 }
+
+/* radiobuttons ends */
 
 .feed_a_friend_button{
 	position: absolute;
