@@ -16,21 +16,13 @@ function progress() {
  
 // burger_menu //
 
-/*const header_burger = document.querySelector('.header_burger');
-if(burger_menu){
-  const burger_menu = document.querySelector('.burger_menu');
-    burger_menu.addEventListener("click", function(e){
-      burger_menu.classList.toggle('_active');
-  }
-}
-
-/*$(document).ready(function() {
-  $('.header_burger').click(function(event) {
-    $('.header_burger','.burger_menu').toggleClass('active');
-  });
-});*/
-
-
+let header_burger_logo = document.querySelector('.header_burger_logo');
+let burger_menu = document.querySelector('.burger_menu');
+header_burger_logo.addEventListener('click', function(){
+  document.body.classList.toggle('_lock');
+  header_burger_logo.classList.toggle('_active');
+  burger_menu.classList.toggle('_active');
+})
 
 /*let validation = new JustValidate('#form')
      
