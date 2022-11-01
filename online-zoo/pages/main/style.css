@@ -787,6 +787,24 @@ a:active{
   border-radius: 5px;
   overflow: hidden;
 }
+.animal_card_3{
+  position: relative;
+  width: 366px;
+  height: 426px;
+
+  border: 1px solid #FA6F32;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.animal_card_7{
+  position: relative;
+  width: 366px;
+  height: 426px;
+
+  border: 1px solid #FA6F32;
+  border-radius: 5px;
+  overflow: hidden;
+}
 
 .img_wrap{
   position: relative;
@@ -1956,6 +1974,12 @@ input:invalid~button {
     width: 294px;
     height: 354px;
   }
+  .animal_card_3{
+  display: none;
+  }
+  .animal_card_7{
+  display: none;
+  }
   .pet{
     width: 294px;
     height: 294px;
@@ -1989,7 +2013,7 @@ input:invalid~button {
   .block__of__cards__section1{
     height: 354px;
     margin-bottom: 92px; 
-    max-width: 940px;
+    max-width: 700px;
     padding: 0;
   }
   .slider_buttons_block{
@@ -1998,7 +2022,7 @@ input:invalid~button {
   .block__of__cards__section2{
     height: 354px;
     margin-bottom: 80px; 
-    max-width: 940px;
+    max-width: 700px;
     padding: 0;
   }
   .choose_button{
@@ -2234,6 +2258,12 @@ input:invalid~button {
     width: 495px;
     height: 367px;
   }
+  .block__of__cards__section1{
+    max-width: 640px;
+  }
+  .block__of__cards__section2{
+    max-width: 640px;
+  }
   .animal_card{
     width: 285px;
     height: 332px;
@@ -2291,7 +2321,6 @@ input:invalid~button {
 
 .block__of__cards__section1{
   height: 332px;
-  max-width: 940px;
 }
 
 .slider_buttons_block{
@@ -2301,7 +2330,6 @@ input:invalid~button {
 
 .block__of__cards__section2{
   height: 332px;
-  max-width: 940px;
   margin-bottom: 60px;
 }
 
@@ -2582,6 +2610,16 @@ input:invalid~button {
     margin-bottom: 20px;
   }
   .animal_card_extra640{
+    display: block;
+    position: relative;
+    width: 285px;
+    height: 332px;
+
+    border: 1px solid #FA6F32;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .animal_card_3{
     display: block;
     position: relative;
     width: 285px;
